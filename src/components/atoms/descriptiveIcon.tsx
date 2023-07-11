@@ -4,17 +4,17 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface baseProps {
   icon: IconProp,
-  style:CSSProperties,
+  style: CSSProperties,
   text?: string,
 }
 
 type Props = baseProps;
 
-const DescriptiveIcon: FC<Props> = ({icon,text,style}) => {
+const DescriptiveIcon: FC<Props> = ({ icon, text, style}) => {
   return (
     <div>
-      <FontAwesomeIcon icon={icon} style={style}/>
-      { text ? <span>{text}</span> : null}
+      <FontAwesomeIcon icon={icon} style={style} />
+      {text ? <span>{text}</span> : null}
     </div>
   )
 }
