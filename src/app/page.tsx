@@ -1,4 +1,4 @@
-import DescriptiveIcon from "@/components/atoms/DescriptiveIcon"
+import ImageContainer from "@/components/atoms/ImageContainer"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { faLandmark } from "@fortawesome/free-solid-svg-icons"
 
@@ -10,9 +10,5 @@ export default function Page() {
   }
 
   const opc: string[]=['home','about us']
-  return <h1>
-    Hello, Next.js!
-    <DescriptiveIcon icon={faLandmark}  style={style} text="Historia  "/>
-   
-    </h1>
+  return <ImageContainer src={"https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg"} alt={"imageng"} size ={500} />
 }
