@@ -4,12 +4,13 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends HTMLAttributes<HTMLButtonElement>{
     isHome?:Boolean;
+    text:String;
 }
 
-const GoBackButton = ({isHome}: Props) => {
+const GoBackButton = ({isHome,text}: Props) => {
     return (
         <button className={`flex gap-4 content-center items-center px-3 py-1 ${isHome} && 'invisible'`}>      
-            <span className="text-small text-blue-400 font-semibold">Back</span>
+            <span className="text-small text-blue-400 font-semibold">{text}</span>
             <FontAwesomeIcon className='w-3 text-blue-400' icon={faArrowUp}/>
         </button> 
     );
