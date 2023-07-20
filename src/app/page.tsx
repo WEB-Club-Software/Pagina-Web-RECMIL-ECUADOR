@@ -10,5 +10,5 @@ export default function Page() {
   }
 
   const opc: string[]=['home','about us']
-  return <NextToButton/>
+  return <NextToButton text={"Conocenos más"}/>
 }
