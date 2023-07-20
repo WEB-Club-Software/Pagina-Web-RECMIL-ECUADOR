@@ -1,4 +1,4 @@
-import DescriptiveIcon from "@/components/atoms/DescriptiveIcon"
+import NextToButton from "@/components/atoms/NextToButton"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { faLandmark } from "@fortawesome/free-solid-svg-icons"
 
@@ -10,9 +10,5 @@ export default function Page() {
   }
 
   const opc: string[]=['home','about us']
-  return <h1>
-    Hello, Next.js!
-    <DescriptiveIcon icon={faLandmark}  style={style} text="Historia  "/>
-   
-    </h1>
+  return <NextToButton text={"Conocenos más"}/>
 }
