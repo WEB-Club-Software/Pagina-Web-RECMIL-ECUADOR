@@ -1,12 +1,10 @@
+import Contact from "@/components/molecules/Contact"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { faLandmark } from "@fortawesome/free-solid-svg-icons"
 
 
 export default function Page() {
 
-  return <h1>
-
-    app
-
-
-  </h1>
-
+  const opc: string[]=['home','about us']
+  return <Contact /> 
 }
