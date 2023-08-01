@@ -1,6 +1,7 @@
 import { SizeProps } from '@/interface/misc.interrfaces';
+import Image from 'next/image';
 import React from 'react';
-import {FC} from 'react'
+import { FC } from 'react'
 
 interface baseProps {
     src: string;
@@ -9,9 +10,9 @@ interface baseProps {
 
 type Props = baseProps & SizeProps;
 
-const ImageContainer: FC<Props> = ({src,alt,width,height,size}) => {
+const ImageContainer: FC<Props> = ({ src, alt, width, height, size }) => {
     return (
-        <img src={src} alt={alt} width={width || size} height={height || size}/>
+        <Image src={src} alt={alt} width={width || size} height={height || size} />
     );
 };
 
