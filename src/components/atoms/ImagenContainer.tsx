@@ -1,10 +1,10 @@
 import { SizeProps } from '@/interface/misc.interrfaces';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import { FC } from 'react'
 
 interface baseProps {
-    src: string;
+    src: string | StaticImageData;
     alt: string;
 }
 

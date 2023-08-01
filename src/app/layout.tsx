@@ -1,3 +1,5 @@
+import Footer from "@/components/organism/Footer";
+import Navbar from "@/components/organism/Navbar";
 import './globals.css'
 
 export const metadata = {
@@ -5,10 +7,14 @@ export const metadata = {
   description: 'Recmil web page developed to display the information related to the association',
 }
 
-export default function RootLayout({children,}: {children: React.ReactNode}) {
+export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
