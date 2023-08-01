@@ -31,7 +31,6 @@ const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions
             setMostrar("hidden")
         }
     }
-
     return (
         <>
             {navigationOptions ?
