@@ -31,13 +31,12 @@ const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions
             setMostrar("hidden")
         }
     }
-
     return (
         <>
             {navigationOptions ?
                 <div>
                     <div className="flex gap-2 items-center" >
-                        <Link href={href} className="text-gray-500 text-lg font-medium">{textNavigate}</Link>
+                        <Link href={href} className="text-gray-500 text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
                         <button onClick={subMenu}>
                             <FontAwesomeIcon icon={faChevronDown} style={style} />
                         </button>
@@ -49,7 +48,7 @@ const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions
                     </nav>
                 </div>
                 : <div>
-                    <Link href={href} className="text-gray-500 text-lg font-medium">{textNavigate}</Link>
+                    <Link href={href} className="text-gray-500 text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
                 </div>
             }
         </>
