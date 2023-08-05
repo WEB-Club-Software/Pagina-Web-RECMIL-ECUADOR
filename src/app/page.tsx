@@ -8,6 +8,7 @@ import { faLandmark } from "@fortawesome/free-solid-svg-icons";
 import DescriptiveIcon from "@/components/atoms/descriptiveIcon";
 import { faBuilding } from "@fortawesome/free-solid-svg-icons";
 import Organigrama from "/public/images/OrganigramaFondo.png"
+import GoBackButton from "@/components/atoms/GoBackButton";
 
 const Page = () => {
   const text = "Descubre la sabiduría divina en cada parábola y permite que la esperanza guíe tu camino hacia la plenitud espiritual."
@@ -17,24 +18,32 @@ const Page = () => {
   const vision = "La corporación Red Cristiana Militar en el 2027 es reconocida como una organización de apoyo importante para la Fuerza Pública ecuatoriana en el desarrollo de su personal y sus familias, cubre todos los ambientes geográficos en donde se desarrollen sus actividades profesionales, utiliza tecnología avanzada con talento humano certificado y capacitado en técnicas y métodos de educación y formación cristianas."
   return (
     <>
-      <section className="flex justify-around items-center h-screen">
+      <section className="flex justify-around items-center h-screen" id="Main">
         <ImageContainer src={Recmil} alt={"Logo"} size={500} />
         <div className="w-3/6 flex  flex-col gap-10 items-center">
           <MainText main={text} subMain={subText} />
-          <NextToButton text={"Conocer Mas"} />
+          <NextToButton text={"Conocer Mas"} nextPage={"#Historia"}/>
         </div>
       </section>
-      <section className="h-screen" id="Historia">
+      <section className="h-screen mb-24" id="Historia">
         <DescriptiveIcon text="Historia" icon={faLandmark} />
         <SquareComponent parrafo={historia} className="w-3/4 h-5/6 m-auto" />
+        <div className="flex justify-end py-10 pr-14">
+          <GoBackButton text={"Go Back"} previusPage={"#Main"}/>
+          <NextToButton text={"Next to"} nextPage={"#Organigrama"}/>
+        </div>
       </section>
 
-      <section className="h-screen" id="Organigrama">
+      <section className="h-screen mb-24" id="Organigrama">
         <DescriptiveIcon text="Organigrama" icon={faBuilding} />
         <SquareComponent dir={Organigrama} className="w-3/4 h-5/6 m-auto" />
+        <div className="flex justify-end py-10 pr-14">
+          <GoBackButton text={"Go Back"} previusPage={"#Historia"}/>
+          <NextToButton text={"Next to"} nextPage={"#Mision"}/>
+        </div>
       </section>
 
-      <section className="h-screen flex flex-col items-center">
+      <section className="h-screen flex flex-col items-center" id="Mision">
         <div className="text-3xl w-full text-center font-bold">¿A Donde Vamos? </div>
         <div className="flex h-full items-center justify-around">
           <div className="flex  flex-col items-center gap-11">
@@ -45,6 +54,9 @@ const Page = () => {
             <span className="font-bold">Vision</span>
             <SquareComponent parrafo={vision} className="w-4/5 " />
           </div>
+        </div>
+        <div className="place-self-end pr-16">
+          <GoBackButton text={"Go Back"} previusPage={"#Organigrama"}/>
         </div>
       </section>
       <Accordion />
