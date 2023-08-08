@@ -10,7 +10,7 @@ const navElementos = [
 
 const NavigationElements = () => {
     return (
-        <div className="flex gap-10">
+        <div className="flex  gap-5 md:gap-10">
             <Navigationbutton navigationOptions={navElementos} textNavigate="Home" href="/" />
             <Navigationbutton textNavigate="Eventos" href="/events" />
             <Navigationbutton textNavigate="Noticias" href="/news" />
