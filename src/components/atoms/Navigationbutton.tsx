@@ -2,8 +2,9 @@
 
 import { FC, useState, useRef } from "react"
 import Link from 'next/link'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+// import DescriptiveIcon from "./descriptiveIcon"
 
 interface propsNavigation {
     textNavigate: string,
@@ -11,10 +12,6 @@ interface propsNavigation {
     navigationOptions?: JSX.Element[]
 }
 
-const style = {
-    width: "13px",
-    color: "#858A8F"
-}
 
 const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions, href }) => {
 
@@ -36,9 +33,9 @@ const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions
             {navigationOptions ?
                 <div>
                     <div className="flex gap-2 items-center" >
-                        <Link href={href} className="text-gray-500 text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
-                        <button onClick={subMenu}>
-                            <FontAwesomeIcon icon={faChevronDown} style={style} />
+                        <Link href={href} className="text-textColor text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
+                        <button className="" onClick={subMenu}>
+                            🔻
                         </button>
                     </div>
                     <nav ref={elementoRef} className={`bg-zinc-700 text-gray-200 ${mostrar} fixed`} >
@@ -48,7 +45,7 @@ const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions
                     </nav>
                 </div>
                 : <div>
-                    <Link href={href} className="text-gray-500 text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
+                    <Link href={href} className="text-textColor text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
                 </div>
             }
         </>

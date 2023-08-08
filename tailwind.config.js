@@ -16,12 +16,27 @@ module.exports = {
       full: "9999px",
       large: "12px",
     },
-
+    fontSize: {
+      xs: "0.69rem",
+      sm: "0.8rem",
+      base: "1rem",
+      xl: "1.25rem",
+      "2xl": "1.563rem",
+      "3xl": "1.953rem",
+      "4xl": "2.441rem",
+      "5xl": "3.052rem",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        customColor: "#F22233",
+        textColor: "#F2F2F2",
+        squareColor: "#F2E750",
+        footer: "#BF9A2A",
       },
     },
   },

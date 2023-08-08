@@ -6,13 +6,14 @@ import { FC } from 'react'
 interface baseProps {
     src: string | StaticImageData;
     alt: string;
+    animation?: string;
 }
 
 type Props = baseProps & SizeProps;
 
-const ImageContainer: FC<Props> = ({ src, alt, width, height, size }) => {
+const ImageContainer: FC<Props> = ({ src, alt, width, height, size, animation }) => {
     return (
-        <Image src={src} alt={alt} width={width || size} height={height || size} />
+        <Image priority={true} className={`${animation}`} src={src} alt={alt} width={width || size} height={height || size} />
     );
 };
 

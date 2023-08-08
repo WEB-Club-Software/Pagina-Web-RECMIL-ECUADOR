@@ -8,9 +8,8 @@ interface prop {
 
 const SquareComponent: FC<prop> = ({ parrafo, className, dir }) => {
     return (
-        <div className={`${className}  rounded-lg bg-gray-200 flex justify-center p-14`}>
-            {parrafo ? <p className="text-black text-sm">{parrafo}</p> : <ImageContainer src={dir} alt="Organigrama" size={600} />}
-
+        <div className={`${className}  rounded-lg bg-squareColor flex justify-center p-14`}>
+            {parrafo ? <p className="text-black text-xs md:text-sm 2xl:text-xl">{parrafo}</p> : <ImageContainer src={dir} alt="Organigrama" size={600} />}
         </div>
     );
 };

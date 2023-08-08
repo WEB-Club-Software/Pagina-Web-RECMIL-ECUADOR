@@ -4,9 +4,9 @@ import Media from '../molecules/Media';
 
 const Footer = () => {
     return (
-        <div className='flex flex-row items-center py-3 justify-around w-full bg-neutral-600'>
-            <Contact/>
-            <Media/>
+        <div className='flex flex-row items-center py-3 justify-around w-full bg-footer'>
+            <Contact />
+            <Media />
         </div>
     );
 };

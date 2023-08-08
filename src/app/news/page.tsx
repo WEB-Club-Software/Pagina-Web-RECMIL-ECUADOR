@@ -1,9 +1,9 @@
 
 export default function AboutPage() {
   return (
-    <>
-        <h1>Noticias</h1>
-        <span>En Construcion</span>
-    </>
+    <div className="w-screen h-screen flex flex-col justify-center items-center">
+      <h1>Noticias</h1>
+      <div>En Construción 🚧</div>
+    </div>
   )
 }

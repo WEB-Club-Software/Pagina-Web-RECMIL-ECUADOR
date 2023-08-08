@@ -1,22 +1,18 @@
-import { SizeProps } from '@/interface/misc.interrfaces';
 import React from 'react';
-import {FC} from 'react'
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome'; 
+import { FC } from 'react'
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface baseProps {
     icon: IconProp;
-    alt: string;
     color: string;
 }
 
-type Props = baseProps & SizeProps;
-
-const ImageContainer: FC<Props> = ({icon,color, alt,width,height,size}) => {
+const ImageContainer: FC<baseProps> = ({ icon, color }) => {
     return (
-       <a href='' className='flex items-center justify-center bg-white p-1 m-0'>
-        <FontAwesomeIcon style={{color: color}} icon={icon} width={width || size} height={height || size}/>
-       </a>
+        <a href='' className='flex items-center justify-center p-1 m-0'>
+            <FontAwesomeIcon className='hover:scale-125 ' style={{ color: color, width: "3rem" }} icon={icon} />
+        </a>
     );
 };
 

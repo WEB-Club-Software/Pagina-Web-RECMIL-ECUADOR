@@ -1,5 +1,5 @@
 import ImageContainer from "../atoms/ImagenContainer";
-import Recmil from "/public/images/Recmil.jpeg";
+import Recmil from "/public/icons/Recmil.svg";
 
 const RecmilLogo = () => {
   return (
@@ -7,9 +7,8 @@ const RecmilLogo = () => {
       <ImageContainer
         src={Recmil}
         alt="Logo"
-        width={80}
-        height={80}
         size={80}
+        animation="bg-white rounded-full"
       />
       <span className="text-gray-500 text-4xl font-bold">Recmil</span>
     </div>
