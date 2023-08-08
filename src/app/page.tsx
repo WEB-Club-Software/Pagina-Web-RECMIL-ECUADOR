@@ -28,7 +28,7 @@ const Page = () => {
       </section>
       <section className="h-screen mb-24 pt-12" id="historia">
         <DescriptiveIcon text="Historia" icon={faLandmark} />
-        <SquareComponent parrafo={historia} className="m-auto w-4/5 h-5/6" />
+        <SquareComponent parrafo={historia} className="m-auto w-11/12 h-5/6" />
         <div className="flex justify-end py-10 pr-14 gap-4">
           <GoBackButton text={"Go Back"} previusPage={"#main"} />
           <NextToButton text={"Next to"} nextPage={"#organigrama"} />
@@ -37,7 +37,7 @@ const Page = () => {
 
       <section className="h-screen mb-24 pt-12" id="organigrama">
         <DescriptiveIcon text="Organigrama" icon={faBuilding} />
-        <SquareComponent dir={Organigrama} className="w-3/4 h-5/6 m-auto" />
+        <SquareComponent dir={Organigrama} className="w-11/12 h-5/6 m-auto" />
         <div className="flex justify-end py-10 pr-14 gap-4">
           <GoBackButton text={"Go Back"} previusPage={"#historia"} />
           <NextToButton text={"Next to"} nextPage={"#mision"} />
@@ -45,7 +45,7 @@ const Page = () => {
       </section>
 
       <section className="h-screen flex flex-col items-center pt-1 2" id="mision">
-        <div className="text-3xl w-full text-center font-bold">¿A Donde Vamos? </div>
+        <div className="text-3xl w-4/5 text-center font-bold border-b-4 border-black ">¿A Donde Vamos? </div>
         <div className="flex flex-col md:flex-row  h-full items-center justify-around">
           <div className="flex  flex-col items-center gap-11">
             <span className="font-bold">Mision</span>
