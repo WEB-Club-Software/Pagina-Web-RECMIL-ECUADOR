@@ -14,7 +14,9 @@ type Props = baseProps & SizeProps;
 
 const ImageContainer: FC<Props> = ({ src, alt, width, height, size, animation, responsive }) => {
     return (
-        <Image priority={true} className={`${animation}`} src={src} alt={alt} width={width || size} height={height || size} />
+        <div>
+            <Image priority={true} className={`${animation}`} src={src} alt={alt} width={width || size} height={height || size} />
+        </div>
     );
 };
 

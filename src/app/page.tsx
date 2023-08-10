@@ -19,15 +19,15 @@ const Page = () => {
 
   return (
     <>
-      <section className="flex flex-col gap-5 justify-center items-center md:gap-0 md:flex-row md:justify-around md:items-center h-screen" id="main">
+      <section className="p-0 flex flex-col gap-5 justify-center items-center md:gap-0 md:flex-row md:justify-around md:items-center mt-20 sm:mt-32 md:mt-7 h-screen " id="main">
         <ImageContainer animation={"rounded-full slow-spin"} src={Recmil} alt={"Logo"} size={500} />
         <div className=" w-screen p-2 md:p-0 md:w-3/6 flex  flex-col gap-5 md:gap-10  items-center">
           <MainText main={text} subMain={subText} />
           <NextToButton text={"Conocer Mas"} nextPage={"#historia"} />
         </div>
       </section>
-      <section className="h-screen mb-24 pt-12" id="historia">
-        <DescriptiveIcon text="Historia" icon={faLandmark} />
+      <DescriptiveIcon text="Historia" icon={faLandmark} />
+      <section className="flex items-center justify-center flex-col h-screen mb-16 pt-12" id="historia">
         <SquareComponent parrafo={historia} className="m-auto w-11/12 h-5/6" />
         <div className="flex justify-end py-10 pr-14 gap-4">
           <GoBackButton text={"Go Back"} previusPage={"#main"} />
@@ -35,8 +35,8 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="h-screen mb-24 pt-12" id="organigrama">
-        <DescriptiveIcon text="Organigrama" icon={faBuilding} />
+      <DescriptiveIcon text="Organigrama" icon={faBuilding} />
+      <section className="flex items-center justify-center flex-col h-screen mb-36 pt-12" id="organigrama">
         <SquareComponent dir={Organigrama} className="w-11/12 h-5/6 m-auto" />
         <div className="flex justify-end py-10 pr-14 gap-4">
           <GoBackButton text={"Go Back"} previusPage={"#historia"} />
@@ -44,7 +44,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="h-screen flex flex-col items-center pt-1 2" id="mision">
+      <section className="h-screen flex flex-col items-center pt-1 mb-8" id="mision">
         <div className="text-3xl w-4/5 text-center font-bold border-b-4 border-black ">¿A Donde Vamos? </div>
         <div className="flex flex-col md:flex-row  h-full items-center justify-around">
           <div className="flex  flex-col items-center gap-11">

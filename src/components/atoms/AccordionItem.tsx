@@ -18,7 +18,7 @@ const AccordionItem: FC<AccordionItemProps> = ({ item, active, handleTogle }) =>
     return (
         <li className={`bg-zinc-200 list-none p-6  border-solid border-black  ${active === item.id ? "rounded-lg" : "rounded-full"}`}>
             <div>
-                <h2 onClick={() => handleTogle(item.id)} className='text-xl font-medium text-black flex justify-between cursor-pointer select-none'>
+                <h2 onClick={() => handleTogle(item.id)} className='xs:text-md md:text-xl font-medium text-black flex justify-between cursor-pointer select-none'>
                     {item.title}<span className='text-gray-500'>{item.id === active ? "-" : "+"}</span>
                 </h2>
             </div>
