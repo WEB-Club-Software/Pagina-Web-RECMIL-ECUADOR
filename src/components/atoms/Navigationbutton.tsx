@@ -2,9 +2,8 @@
 
 import { FC, useState, useRef } from "react"
 import Link from 'next/link'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
-// import DescriptiveIcon from "./descriptiveIcon"
+import subMenuIcon from '../../../public/icons/chevron.svg'
+import ImageContainer from "./ImagenContainer"
 
 interface propsNavigation {
     textNavigate: string,
@@ -35,7 +34,9 @@ const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions
                     <div className="flex gap-2 items-center" >
                         <Link href={href} className="text-textColor text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
                         <button className="" onClick={subMenu}>
-                            🔻
+                            <i>
+                                <ImageContainer src={subMenuIcon} alt="svg" size={20} />
+                            </i>
                         </button>
                     </div>
                     <nav ref={elementoRef} className={`bg-zinc-700 text-gray-200 ${mostrar} fixed`} >
