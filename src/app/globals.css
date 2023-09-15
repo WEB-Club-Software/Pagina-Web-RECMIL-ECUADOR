@@ -23,3 +23,6 @@ html {
 .slow-spin {
   animation: spin 10s linear infinite;
 }
+/* .imgFondo {
+  background: linear-gradient(url("/public/images/backgroud.jpeg"), blue, red);
+} */

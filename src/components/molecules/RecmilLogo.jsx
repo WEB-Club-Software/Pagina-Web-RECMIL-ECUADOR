@@ -10,7 +10,7 @@ const RecmilLogo = () => {
         size={80}
         animation="bg-white rounded-full"
       />
-      <span className="text-gray-500 text-4xl font-bold">Recmil</span>
+      <span className="text-gray-600 text-4xl font-bold">Recmil</span>
     </div>
   );
 };

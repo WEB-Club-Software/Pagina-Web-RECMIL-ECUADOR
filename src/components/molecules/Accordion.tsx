@@ -1,7 +1,7 @@
 'use client'
 import { useState, FC } from "react";
 import AccordionItem from "../atoms/AccordionItem";
-import Data from '@/data'
+import Data from '@/lib/data'
 interface dataProp {
     data?: any
 }

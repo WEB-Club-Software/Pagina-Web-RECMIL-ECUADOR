@@ -1,9 +1,8 @@
 'use client'
 
-import { FC, useState, useRef } from "react"
+import { FC, useState } from "react"
 import Link from 'next/link'
-import subMenuIcon from '../../../public/icons/chevron.svg'
-import ImageContainer from "./ImagenContainer"
+import { ChevronDown, ChevronUp } from "react-bootstrap-icons"
 
 interface propsNavigation {
     textNavigate: string,
@@ -13,10 +12,8 @@ interface propsNavigation {
 
 
 const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions, href }) => {
-
     let [activado, setActivado] = useState<boolean | null>(false)
     let [mostrar, setMostrar] = useState<string | null>("hidden")
-    const elementoRef = useRef(null)
 
     const subMenu = (event: any) => {
         if (activado === false) {
@@ -31,17 +28,19 @@ const Navigationbutton: FC<propsNavigation> = ({ textNavigate, navigationOptions
         <>
             {navigationOptions ?
                 <div>
-                    <div className="flex gap-2 items-center" >
+                    <div className="flex gap-2 items-center " >
                         <Link href={href} className="text-textColor text-lg font-medium hover:text-gray-900">{textNavigate}</Link>
-                        <button className="" onClick={subMenu}>
-                            <i>
-                                <ImageContainer src={subMenuIcon} alt="svg" size={20} />
-                            </i>
-                        </button>
+                        {
+                            activado ? <button className="" onClick={subMenu}>
+                                <ChevronUp color="white" />
+                            </button> : <button className="" onClick={subMenu}>
+                                <ChevronDown color="white" />
+                            </button>
+                        }
                     </div>
-                    <nav ref={elementoRef} className={`bg-zinc-700 text-gray-200 ${mostrar} fixed`} >
+                    <nav className={`bg-zinc-700 text-gray-200 ${mostrar} fixed `} >
                         {navigationOptions.map((elemento, index) => {
-                            return <li className="list-none h-11 border border-black w-56 flex items-center p-5" key={index}>{elemento}</li>
+                            return <li className="list-none h-11 border border-black w-56 flex items-center p-5 hover:text-green-600 " key={index}>{elemento}</li>
                         })}
                     </nav>
                 </div>
